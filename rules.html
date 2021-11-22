@@ -4,19 +4,27 @@
   <title>Новогоднее соревнование в CS центре</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="shortcut icon" href="img/favicon.ico"/>
-  <meta property="og:image" content="https://advent.compscicenter.ru/img/meta.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,900;1,400&display=swap"
+        rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <meta property="og:image" content="https://advent.compscicenter.ru/img/meta.jpg">
 </head>
 <body>
-<header class="header">
-  <a class="header__logo" href="/"><img src="img/logo-csc.svg" width="115" height="93" alt=""></a>
+<header class="header header--inner">
   <div class="header__menu">
-    <a class="header__link" href=""><img src="img/star.svg" width="48" height="48" alt="">Рейтинг участников</a>
+    <a href="/" class="header__logo">
+      <img class="logo-csc" src="img/logo-csc.svg" width="160" height="80" alt="">
+    </a>
+    <a class="header__link" href="/" style="margin-left: 0; margin-right: auto"><img class="arrow-left" src="img/arrow-left.svg" width="48" height="48" alt=""></a>
     <a class="header__link" href="/rules.html"><img src="img/rules.svg" width="48" height="48" alt="">Правила
       участия</a>
+    <div id="btnModal" class="btn-start">
+      <span class="side-top"></span>
+      <span class="side-left"></span>
+      <span class="side-right">Участвовать</span>
+    </div>
   </div>
 </header>
 
@@ -40,7 +48,7 @@
   </p>
   <h2>Отправка решений</h2>
   <p>
-    Решения нужно отправлять на&nbsp;Stepik в&nbsp;одном из&nbsp;двух форматах. Код программы на&nbsp;том языке, для которого подготовлена
+    Решения нужно отправлять на&nbsp;Stepik в&nbsp;одном из&nbsp;двух форматов. Код программы на&nbsp;том языке, для которого подготовлена
     задача, или кодовая строка, которую нужно получить специальным образом, тоже написав программу на&nbsp;только что
     изученном языке.
   </p>
@@ -55,5 +63,38 @@
     Турнирная таблица появится на&nbsp;сайте 7&nbsp;декабря и&nbsp;будет обновляться раз в&nbsp;несколько дней.
   </p>
 </div>
+<div id="regModal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close"><img src="img/cross.svg" width="32" height="32" alt=""></span>
+      <h2>Регистрация в соревновании</h2>
+    </div>
+    <div class="modal-body">
+      <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
+      <iframe src="https://forms.yandex.ru/cloud/617c0c46f8447da18091c9d4/?iframe=1" frameborder="0"
+              name="ya-form-617c0c46f8447da18091c9d4" width="100%"></iframe>
+
+    </div>
+  </div>
+</div>
+<script>
+  let modal = document.getElementById("regModal");
+  let btn = document.getElementById("btnModal");
+  let span = document.getElementsByClassName("close")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+  }
+
+  span.onclick = function () {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
 </body>
 </html>
