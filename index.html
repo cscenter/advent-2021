@@ -42,21 +42,15 @@
       участия</a>
     <a class="header__link" href="/top.html"><img src="img/star.svg" width="48" height="48"
                                                   alt="">Рейтинг</a>
-    <div id="btnModal" class="btn-start">
-      <span class="side-top"></span>
-      <span class="side-left"></span>
-      <span class="side-right">Участвовать</span>
-    </div>
   </div>
 </header>
 
 <img src="img/logo-3.svg" style="width: 90%; max-width: 600px; margin: 0 auto 20px auto;" alt="">
-<p class="subtitle">Адвент-календарь от&nbsp;CS&nbsp;центра: рассказываем про десять языков программирования и&nbsp;предлагаем
-  задачи, чтобы попробовать их&nbsp;на&nbsp;практике.
-  Начало 1&nbsp;декабря.</p>
+<p class="subtitle">На главной странице поменять текст на "Адвент-календарь от CS центра: рассказываем про десять языков программирования и предлагаем задачи, чтобы попробовать их на практике. Соревнование завершено, но можно
+  <a href="https://stepik.org/course/104639/promo" target="_blank" rel="nofollow">поупражняться в задачах</a>.</p>
 
 <div class="steps-wrapper">
-  <div class="step" id="start">
+  <a href="https://stepik.org/course/104639/promo" target="_blank" rel="nofollow" class="step" id="start">
     <div class="svg-wrapper">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 520 972"
            xml:space="preserve">
@@ -235,7 +229,7 @@
         <path fill="#fbae2f" d="m257 868.5 1-190-204-114-.8 53 181.6 104.8.1-.2.3 142.4z" id="btn-hidder"/>
 </svg>
     </div>
-  </div>
+  </a>
   <a href="/perl.html" class="step" id="perl">
     <div class="svg-wrapper">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
@@ -1316,44 +1310,5 @@
   </a>
 </div>
 
-<div id="regModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close"><img src="img/cross.svg" width="32" height="32" alt=""></span>
-      <h2>Регистрация в соревновании</h2>
-    </div>
-    <div class="modal-body">
-      <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
-      <iframe src="https://forms.yandex.ru/cloud/617c0c46f8447da18091c9d4/?iframe=1" frameborder="0"
-              name="ya-form-617c0c46f8447da18091c9d4" width="100%"></iframe>
-
-    </div>
-  </div>
-</div>
-<script>
-  let modal = document.getElementById("regModal");
-  let btn = document.getElementById("start");
-  let btnHeader = document.getElementById("btnModal");
-  let span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function () {
-    modal.style.display = "block";
-    btn.classList.add('stopped');
-  }
-
-  btnHeader.onclick = function () {
-    modal.style.display = "block";
-  }
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
 </body>
 </html>

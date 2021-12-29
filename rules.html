@@ -38,11 +38,7 @@
     <a class="header__link" href="/rules.html"><img src="img/rules.svg" width="48" height="48" alt="">Правила
       участия</a>
     <a class="header__link" href="/top.html"><img src="img/star.svg" width="48" height="48" alt="">Рейтинг</a>
-    <div id="btnModal" class="btn-start">
-      <span class="side-top"></span>
-      <span class="side-left"></span>
-      <span class="side-right">Участвовать</span>
-    </div>
+
   </div>
 </header>
 <div class="container">
@@ -89,38 +85,5 @@
     Турнирная таблица появится на&nbsp;сайте 7&nbsp;декабря и&nbsp;будет обновляться раз в&nbsp;несколько дней.
   </p>
 </div>
-<div id="regModal" class="modal">
-  <div class="modal-content">
-    <div class="modal-header">
-      <span class="close"><img src="img/cross.svg" width="32" height="32" alt=""></span>
-      <h2>Регистрация в соревновании</h2>
-    </div>
-    <div class="modal-body">
-      <script src="https://yastatic.net/s3/frontend/forms/_/embed.js"></script>
-      <iframe src="https://forms.yandex.ru/cloud/617c0c46f8447da18091c9d4/?iframe=1" frameborder="0"
-              name="ya-form-617c0c46f8447da18091c9d4" width="100%"></iframe>
-
-    </div>
-  </div>
-</div>
-<script>
-  let modal = document.getElementById("regModal");
-  let btn = document.getElementById("btnModal");
-  let span = document.getElementsByClassName("close")[0];
-
-  btn.onclick = function () {
-    modal.style.display = "block";
-  }
-
-  span.onclick = function () {
-    modal.style.display = "none";
-  }
-
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-</script>
 </body>
 </html>
